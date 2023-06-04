@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\StoreController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
+use App\Models\Item;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,6 @@ Route::get("/post/{id}", function ($id) {
     ]);
 
 });
+
+Route::get("/store", [StoreController::class, 'index'])->name("store");
+Route::get("/store/{id}", [StoreController::class, 'view']);

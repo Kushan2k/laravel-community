@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Item;
 use Illuminate\Database\Seeder;
 use App\Models\Post;
 use App\Models\User;
@@ -23,6 +25,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         Post::factory(10)->create();
+        Item::factory(10)->create();
 
     }
 }

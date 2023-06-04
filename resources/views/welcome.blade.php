@@ -14,6 +14,8 @@
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
                     {{$post->content}}
                 </p>
+                <p class="text-right">{{$post->created_at}}</p>
+                
             </div>
         </a>
 
