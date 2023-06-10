@@ -13,7 +13,13 @@
             href="#"
             class="py-2 text-green-700 inline-flex items-center justify-center mb-2"
             >
-            {{$post->tags}}
+            @unless (!$post->tags)
+                @foreach (explode(",",$post->tags) as $tag)
+                    <p class="m-1 py-1 px-3 bg-blue-800 text-white rounded-full hover:cursor-pointer 
+                    ">{{$tag}}</p>
+                @endforeach
+                
+            @endunless
             </a>
             <p>{{$post->created_at}}</p>
         </div>

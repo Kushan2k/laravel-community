@@ -3,7 +3,7 @@
 @section('content')
 
 @unless (!$posts)
-    <div class="grid d-flex grid-cols-1 gap-y-3 justify-items-center  lg:grid-cols-2  gap-x-5 gap-3 my-4 p-5">
+    <div class="grid d-flex grid-cols-1 gap-y-3 justify-items-center gap-x-5 gap-3 my-4 p-5">
     @foreach ($posts as $post)
 
     
@@ -18,6 +18,7 @@
                 
             </div>
         </a>
+
 
         
     @endforeach

@@ -1,6 +1,6 @@
 @php
 $segments=explode("/",url()->current());
-$currentRoute=end($segments)
+$currentRoute=end($segments);
 
 
 @endphp
@@ -17,7 +17,6 @@ $currentRoute=end($segments)
         @vite('resources/css/app.css')
     </head>
     <body class="">
-      {{-- {{dd($currentRoute)}} --}}
       <nav class="bg-white border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="/" class="flex items-center md:flex">
@@ -41,7 +40,7 @@ $currentRoute=end($segments)
                   @endif
                    
                   @if (Route::has('register'))
-                  <a href="{{route('register')}}" class="{{$currentRoute=='register'?'text-blue-500':''}} font-semibold block py-2 pl-3 pr-4 text-gray-900 rounded hover:text-blue-500">Register</a>
+                  <a href="{{route('register')}}" class="{{$currentRoute=='register'?'text-blue-500':'text-gray-900'}} font-semibold block py-2 pl-3 pr-4  rounded hover:text-blue-500">Register</a>
                       
                   @endif
               </div>
@@ -53,16 +52,16 @@ $currentRoute=end($segments)
                 <a href="/" class="{{$currentRoute=='127.0.0.1:8000'?'text-blue-500':''}} block py-2 pl-3 pr-4rounded md:bg-transparent hover:text-blue-500 " >Home</a>
               </li>
               <li>
-                <a href="/store" class="{{$currentRoute=='store'?'text-blue-500':''}} block py-2 pl-3 pr-4 text-gray-900 rounded hover:text-blue-500">Store</a>
+                <a href="/store" class="{{$currentRoute=='store'?'text-blue-500':'text-gray-900'}} block py-2 pl-3 pr-4  rounded hover:text-blue-500">Store</a>
               </li>
               <li>
-                <a href="#" class="{{$currentRoute=='service'?'text-blue-500':''}} block py-2 pl-3 pr-4 text-gray-900 rounded hover:text-blue-500">Services</a>
+                <a href="#" class="{{$currentRoute=='service'?'text-blue-500':'text-gray-900'}} block py-2 pl-3 pr-4  rounded hover:text-blue-500">Services</a>
               </li>
               <li>
-                <a href="#" class="{{$currentRoute=='community'?'text-blue-500':''}} block py-2 pl-3 pr-4 text-gray-900 rounded hover:text-blue-500">Community</a>
+                <a href="#" class="{{$currentRoute=='community'?'text-blue-500':'text-gray-900'}} block py-2 pl-3 pr-4  rounded hover:text-blue-500">Community</a>
               </li>
               <li>
-                <a href="#" class="{{$currentRoute=='contact'?'text-blue-500':''}} block py-2 pl-3 pr-4 text-gray-900 rounded hover:text-blue-500">Contact</a>
+                <a href="#" class="{{$currentRoute=='contact'?'text-blue-500':'text-gray-900'}} block py-2 pl-3 pr-4  rounded hover:text-blue-500">Contact</a>
               </li>
             </ul>
           </div>

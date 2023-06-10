@@ -19,7 +19,7 @@ use App\Models\Item;
 
 Route::get('/', function () {
     return view('welcome')->with("posts",Post::all());
-});
+})->name('home');
 
 Route::get("/post/{id}", function ($id) {
     return view("post", [

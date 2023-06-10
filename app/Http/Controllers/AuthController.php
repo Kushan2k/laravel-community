@@ -58,8 +58,13 @@ class AuthController extends Controller
         ]);
 
         if(Auth::attempt($formdata,$request->get('remember'))){
+            $user = Auth::user();
+            return redirect("/");
+            
+
             
         }
+        return redirect("login")->with("error", "unexpected error happend!");
 
         
     }
