@@ -2,6 +2,9 @@
 
 @section('content')
 <section class="bg-gray-50 dark:bg-gray-900">
+  @if (session()->has('msg'))
+      <p class="text-center text-green-600 mt-10 p-5 bg-green-200 border-2">{{session()->get('msg')}}</p>
+  @endif
   <div class="flex flex-col items-center justify-center px-6 py-2 mx-auto md:h-screen lg:py-0">
       <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div class="p-6 space-y-4 md:space-y-6 sm:p-8">

@@ -34,3 +34,4 @@ Route::get('/login', [AuthController::class, 'view_login'])->name("login");
 Route::get('/register', [AuthController::class, 'view_register'])->name("register");
 Route::post("/register", [AuthController::class, 'create_register'])->name('register.create');
 Route::post("/login", [AuthController::class, "login_create"])->name("login.create");
+Route::post("/logout", [AuthController::class, 'logout'])->name("logout");

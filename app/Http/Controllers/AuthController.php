@@ -40,7 +40,7 @@ class AuthController extends Controller
 
             User::create($formdata);
 
-            return redirect("login");
+            return redirect("login")->with("msg","Register successful!");
             
         }catch(Exception $e){
             return redirect('register')->with("error", "Unexpected error accurd!");
@@ -67,5 +67,10 @@ class AuthController extends Controller
         return redirect("login")->with("error", "unexpected error happend!");
 
         
+    }
+
+    public function logout(Request $request){
+        auth()->logout();
+        return redirect()->route("home");
     }
 }

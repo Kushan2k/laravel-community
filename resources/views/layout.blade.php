@@ -63,6 +63,7 @@ $currentRoute=end($segments);
               <li>
                 <a href="#" class="{{$currentRoute=='contact'?'text-blue-500':'text-gray-900'}} block py-2 pl-3 pr-4  rounded hover:text-blue-500">Contact</a>
               </li>
+              
             </ul>
           </div>
         </div>
@@ -88,6 +89,14 @@ $currentRoute=end($segments);
               <li>
                   <a href="#" class="hover:underline">Contact</a>
               </li>
+              @auth
+                  <li class="ml-2">
+                    <form action="{{route('logout')}}" method="POST">
+                      @csrf
+                      <button type="submit" class="text-warning">Logout</button>
+                    </form>
+                  </li>
+              @endauth
           </ul>
       </footer>
     </body>
