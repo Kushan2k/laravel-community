@@ -18,7 +18,7 @@ class StoreController extends Controller
         if($item){
             return view("item")->with("item",$item);
         }
-
+        echo "hello";
         return redirect("store");
         
     }
