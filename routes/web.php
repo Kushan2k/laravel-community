@@ -28,10 +28,10 @@ Route::get("/post/{id}", function ($id) {
 
 });
 
-Route::get("/store", [StoreController::class, 'index'])->name("store");
+Route::get("/store", [StoreController::class, 'index'])->name("store-route");
 Route::get("/store/{id}", [StoreController::class, 'view']);
 Route::get('/login', [AuthController::class, 'view_login'])->name("login");
-Route::get('/register', [AuthController::class, 'view_register'])->name("register");
+Route::get('/register', [AuthController::class, 'view_register'])->name("register-route");
 Route::post("/register", [AuthController::class, 'create_register'])->name('register.create');
 Route::post("/login", [AuthController::class, "login_create"])->name("login.create");
 Route::post("/logout", [AuthController::class, 'logout'])->name("logout");
